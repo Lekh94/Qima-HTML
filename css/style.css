@@ -1,0 +1,358 @@
+/* 
+Theme Name: Qima Coffee
+Index: 1. Home Page
+    1.0 Global Style
+    1.1 Header
+    1.2 Jumbotron
+    1.3 Products Section
+    1.4 Contact Section
+    1.5 Footer
+1.0 Global css Start here...    
+*/
+body{
+    font-family: 'Playfair Display', serif;
+    position: relative;
+}
+p{
+    margin-bottom: 25px;
+    font-size: 22px;
+    color: #555;      
+}
+p>a{
+    color: #555; 
+}
+.theme-color,
+p>a:hover{
+    color:rgb(231, 180, 120);
+}
+.btn-more{
+    font-weight: 900;
+    letter-spacing:2px;
+    text-transform: uppercase;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: all ease-in-out 0.5s;
+}
+.btn-more:hover{
+    text-decoration: none;
+    color:rgb(231, 180, 120);
+    outline: none;
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6{
+    font-weight: 900;
+    letter-spacing: 5px;
+}
+.letter-spce-0{
+    letter-spacing: 0px !important
+}
+a:hover,
+a{
+    text-decoration: none;
+}
+section,.section{
+    padding: 70px 0px;
+}
+.bg-light{
+    background: #fffaf3 !important;
+}
+.section-title{
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 4px;
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+}
+.section-title:after{
+    content: '';
+    display: block;
+    height: 3px;
+    width: 90px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background: rgb(231, 180, 120);
+}
+.shadow{
+    box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.08) !important;
+}
+.position-relative{
+    z-index: 1;
+}
+/* 1.0 Global css End here
+   1.1 Header Start Here..
+ */
+.navbar{
+    background: rgba(0, 0, 0, 0.8);
+    height: 130px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    transition: all ease-in 0.3s;
+}
+.navbar.shrink .navbar-brand.position-absolute{
+    width: 100px;
+}
+.navbar.shrink{
+    height: 90px;
+    background: rgba(0, 0, 0, 0.99);
+}
+.navbar-brand.position-absolute{
+    left: 0;
+    right: 0;
+    width: 150px;
+    top:.5rem;
+    transition: width ease-in 0.3s;
+}
+.navbar .navbar-nav .nav-link,
+.navbar ul li a {
+    color:#fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: all ease-in-out 0.5s;
+    margin-right: 18px;
+    padding: 0;
+    position: relative;
+}
+.navbar .navbar-nav .nav-link:after{
+    content: '';
+    background:rgba(231, 180, 120,0.2);
+    height: 1px;
+    width: 0px;
+    position: absolute;
+    left: 0;
+    bottom: 1px;
+    transition: all ease-in-out 0.5s;
+}
+.navbar-light .navbar-nav .nav-link:focus{
+    color:#fff;
+}
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:hover{
+    color:rgb(231, 180, 120);
+}
+.navbar .navbar-nav .nav-link.active:after,
+.navbar .navbar-nav .nav-link:hover:after{
+    background:rgba(231, 180, 120,0.8);
+    width: 100%;
+}
+.s-link .fa{
+    height: 25px;
+    width: 25px;
+    text-align: center;
+    line-height: 25px;
+    font-size: 12px;
+    transition: all ease-in-out 0.2s;
+}
+.s-link .fa-facebook:hover{
+    background:  #3b5998;
+    border-color: #3b5998 !important;
+}
+.s-link .fa-instagram:hover{
+  background: #f09433; 
+  background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+  background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+  background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+  border-color: #f09433  !important;
+}
+/* 1.1 Header End Here 
+   1.2 Jumbotron Start Here..
+*/
+.jumbotron{
+    height: 100vh;
+    background: url(../images/banner.jpg) no-repeat center center/cover fixed;
+}
+.jumbotron .title{
+    font-size: 60px;
+    letter-spacing: 7px;
+    line-height: 1.6;
+}
+/* 1.2 Jumbotron End Here
+   1.3 Products Section Start here...
+*/
+.products-list .title{
+    line-height: 1.6;
+    letter-spacing: 4px;
+}
+.products-list p{
+    font-size: 20px;
+}
+.price{
+    letter-spacing: 0;
+}
+.products-list .controls{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #191919;
+    opacity: 0.3;
+    transition: all ease-in-out 0.4s;
+}
+.products-list:hover .controls{
+    opacity: 1;
+}
+.carousel-control-next, 
+.carousel-control-prev{
+    position: static;
+    bottom: 0;
+    top: auto;
+    color: #fff;
+    padding: 10px;
+    opacity: 1;
+    width: 80px;
+    font-size: 24px;
+    border-color: #696969 !important
+}
+/* 1.3 Products Section End Here
+   1.4 Contact Section Start Here...
+*/
+.about-thumb{
+    top: 0;
+    bottom: -40px;
+    left: 0;
+}
+section#contact{
+    background: url(../images/contact.jpg) no-repeat center center/cover fixed;
+}
+section#contact:before{
+    content: '';
+    position: absolute;
+    display: block;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.7);
+    z-index: -1;
+}
+.contact-form .form-row{
+    margin-right: -10px;
+    margin-left: -10px;
+}
+.contact-form .form-row>.col{
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.contact-form .form-control{
+    padding: 15px 20px;
+    height: auto;
+}
+.contact-form textarea.form-control{
+    height: 150px;
+    resize: none;
+}
+/* 1.4 Contact Section End Here
+   1.5 Footer Start Here...
+*/
+.footer{
+    background: #191919;
+}
+.address p{
+    font-size: 17px;
+}
+.address h4{
+    font-size: 18px;
+}
+.footer-logo img{
+    max-width: 150px;
+}
+.copyright{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    color: #ccc;
+}
+/* 1.5 Footer End Here
+1. HomePage End Here
+*/
+
+
+
+
+
+@media (min-width: 991.98px) {
+    .products-list .row{
+        height:560px;
+    }
+    .row.custome-grid > div:first-child{
+        -ms-flex: 0 0 46%;
+        flex: 0 0 46%;
+        max-width: 46%;    
+    }
+    .row.custome-grid > div:first-child + div{
+        -ms-flex: 0 0 54%;
+        flex: 0 0 54%;
+        max-width: 54%;    
+    }
+    .products-list .row >div:first-child{
+        padding-bottom: 100px !important;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .products-list .title,
+    .products-list p{
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768.98px){
+    .navbar-brand.position-absolute{
+        position: static !important;
+    }
+    .navbar-light .navbar-toggler {
+        color: rgb(255, 255, 255);
+        border-color: rgb(255, 255, 255);
+        margin-right: 15px;
+        outline: none;
+    }    
+    .navbar{
+        height: auto;
+    }
+    .jumbotron .title{
+        width: 100% !important;
+        font-size: 30px;
+        line-height: 1.2;
+    }
+    p,.products-list .title,
+    .h4, h4{
+        font-size: 17px;
+    }
+    .h2, h2 {
+        font-size: 1.55rem;
+    }
+    .products-list .row >div:first-child + div,
+    #about .row >div:first-child  {
+        height: 240px;
+    }
+    .about-thumb{
+        bottom: 15px;
+        left: 15px;
+        right: 15px;
+        width: auto !important;
+    }
+    .products-list .controls{
+        top: 180px;
+        bottom: auto;
+        opacity: 1;
+        right: 0;
+        margin: auto;
+        width: 160px;
+    }
+    #about .row >div:first-child + div,
+    #contact .row >div{
+        padding: 15px 30px;
+    }
+    .navbar .navbar-nav .nav-link {
+        margin-right: 0;
+        padding: 8px 15px;
+    }
+    ul.navbar-nav.mr-auto {
+        margin-bottom: 10px;
+    }
+}
+
+
